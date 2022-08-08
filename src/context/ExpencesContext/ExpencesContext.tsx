@@ -1,4 +1,4 @@
-import { createContext, FC, ReactNode, useState } from "react";
+import { createContext, FC, ReactNode, useContext, useState } from "react";
 
 interface IExpence {
   body: string;
@@ -10,7 +10,7 @@ interface IExpencesContext {
   expences: IExpence[];
 }
 
-export const ExpencesContext = createContext<IExpencesContext>({
+const ExpencesContext = createContext<IExpencesContext>({
   expences: [],
 });
 
@@ -30,6 +30,8 @@ const useExpencesValue = () => {
   );
   return expencesContext;
 };
+
+export const useExpenceContext =()=> useContext<IExpencesContext>(ExpencesContext)
 
 export const ExpencesProvider: FC<{ children: ReactNode }> = ({ children }) => {
   return (

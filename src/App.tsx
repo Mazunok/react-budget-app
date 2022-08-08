@@ -1,10 +1,8 @@
-import React from 'react';
+import React from "react";
+import { BudgetCard } from "./components/BudgetCard/BudgetCard";
 
 function App() {
-  return (
-    <div className="App">
-    </div>
-  );
+  return <BudgetCard />;
 }
 
 export default App;
