@@ -31,7 +31,8 @@ const useExpencesValue = () => {
   return expencesContext;
 };
 
-export const useExpenceContext =()=> useContext<IExpencesContext>(ExpencesContext)
+export const useExpenceContext = () =>
+  useContext<IExpencesContext>(ExpencesContext);
 
 export const ExpencesProvider: FC<{ children: ReactNode }> = ({ children }) => {
   return (
